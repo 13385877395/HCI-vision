@@ -12,7 +12,8 @@ class MyWindow(QMainWindow, Ui_MainWindow):
 
     def initUI(self):
         self.setupUi(self)
-        self.setWindowTitle('视觉反应分析')
+        self.setWindowTitle('视觉反应分析 ')
+
 
 
 if __name__ == '__main__':
