@@ -1,4 +1,5 @@
 import sys
+from  readdemo import get_data
 
 from CogPara import Ui_MainWindow
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox,QLineEdit
@@ -13,7 +14,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
     def initUI(self):
         self.setupUi(self)
         self.setWindowTitle('视觉反应分析 ')
-
+        print(get_data())
 
 
 if __name__ == '__main__':
