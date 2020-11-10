@@ -29,6 +29,7 @@ pip install pyqt5
 ---CogPara.ui  //QT ui文件
 ---CogPara.py  //QT py文件
 ---CogParaWindow.py //主程序入口
+---readdemo.py  //数据处理模块
 ```
 
 - 学习网址

@@ -1,4 +1,5 @@
 import sys
+from  readdemo import get_data
 
 from CogPara import Ui_MainWindow
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox,QLineEdit
@@ -16,6 +17,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
     def initUI(self):
         self.setupUi(self)
         self.setWindowTitle('视觉反应分析 ')
+<<<<<<< HEAD
 
         #实例化一个figure
         self.F = MyFigure()
@@ -29,6 +31,9 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         self.F.axes.plot(t, s)
         self.F.fig.suptitle("cos")
 
+=======
+        print(get_data())
+>>>>>>> 063e09cec3853b89078b1a5422951fadd411113e
 
 
 if __name__ == '__main__':
