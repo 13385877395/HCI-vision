@@ -27,16 +27,6 @@
      <string>打开模型</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>90</y>
-      <width>431</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -199,13 +189,23 @@
      </property>
     </widget>
    </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>90</y>
+      <width>431</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
    <zorder>frame_3</zorder>
    <zorder>frame</zorder>
    <zorder>pushButton</zorder>
-   <zorder>textBrowser</zorder>
    <zorder>label</zorder>
    <zorder>pushButton_2</zorder>
    <zorder>frame_2</zorder>
+   <zorder>graphicsView</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -213,7 +213,7 @@
      <x>0</x>
      <y>0</y>
      <width>1347</width>
-     <height>23</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

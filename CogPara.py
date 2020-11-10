@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'CogPara.ui'
+# Form implementation generated from reading ui file 'c:\Users\zwt\Desktop\认知建模\HCI-vision\HCI-vision\CogPara.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.1
 #
@@ -20,9 +20,6 @@ class Ui_MainWindow(object):
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(550, 40, 75, 23))
         self.pushButton.setObjectName("pushButton")
-        self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser.setGeometry(QtCore.QRect(30, 90, 431, 192))
-        self.textBrowser.setObjectName("textBrowser")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(40, 60, 54, 12))
         self.label.setObjectName("label")
@@ -51,7 +48,7 @@ class Ui_MainWindow(object):
         self.label_4 = QtWidgets.QLabel(self.frame_2)
         self.label_4.setGeometry(QtCore.QRect(370, 190, 71, 71))
         self.label_4.setText("")
-        self.label_4.setPixmap(QtGui.QPixmap("imgs/vigilancecross.jpg"))
+        self.label_4.setPixmap(QtGui.QPixmap("c:\\Users\\zwt\\Desktop\\认知建模\\HCI-vision\\HCI-vision\\imgs/vigilancecross.jpg"))
         self.label_4.setObjectName("label_4")
         self.label_2 = QtWidgets.QLabel(self.frame_2)
         self.label_2.setGeometry(QtCore.QRect(660, 420, 54, 12))
@@ -67,16 +64,19 @@ class Ui_MainWindow(object):
         self.textBrowser_3 = QtWidgets.QTextBrowser(self.frame_3)
         self.textBrowser_3.setGeometry(QtCore.QRect(40, 90, 431, 192))
         self.textBrowser_3.setObjectName("textBrowser_3")
+        self.graphicsView = QtWidgets.QGraphicsView(self.centralwidget)
+        self.graphicsView.setGeometry(QtCore.QRect(30, 90, 431, 192))
+        self.graphicsView.setObjectName("graphicsView")
         self.frame_3.raise_()
         self.frame.raise_()
         self.pushButton.raise_()
-        self.textBrowser.raise_()
         self.label.raise_()
         self.pushButton_2.raise_()
         self.frame_2.raise_()
+        self.graphicsView.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1347, 23))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1347, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
