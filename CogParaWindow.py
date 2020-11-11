@@ -17,11 +17,10 @@ class MyWindow(QMainWindow, Ui_MainWindow):
     def initUI(self):
         self.setupUi(self)
         self.setWindowTitle('视觉反应分析 ')
-<<<<<<< HEAD
-
         #实例化一个figure
         self.F = MyFigure()
-        self.setCentralWidget(self.F)  #把figure放到widget里面
+        print( type(self.F))
+        self.verticalLayout.addWidget(self.F)  #把figure放到widget里面
         self.plotcos()
 
     #一个测试用的图像
@@ -31,9 +30,6 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         self.F.axes.plot(t, s)
         self.F.fig.suptitle("cos")
 
-=======
-        print(get_data())
->>>>>>> 063e09cec3853b89078b1a5422951fadd411113e
 
 
 if __name__ == '__main__':
