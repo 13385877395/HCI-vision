@@ -21,8 +21,9 @@ class MyFigure(FigureCanvas):
         super(MyFigure, self).__init__(self.fig)
         #创建子图
         self.axes = self.fig.add_subplot(111)
-
-        self.plot()
+        x = [1,2,3]
+        y = [2,2,3]
+        # self.plot()
 
 
     def plot(self):
@@ -48,16 +49,21 @@ class MyFigure(FigureCanvas):
         x = []#x轴是天数
         y = []#y轴是反应时间
 
+        x1 = [2,4,5]
+        y1 = [2,4,5]
         print(list(day_val_dic.keys()))
         for day in list(day_val_dic.keys()):
             for val in day_val_dic[day]:
                 x.append(day)
                 y.append(val)
 
-        self.axes.plot(x, y, color='green', marker='o', linestyle='dashed',
-                    linewidth=0, markersize=3)
+        # self.axes.plot(x, y, color='green', marker='o', linestyle='dashed',
+        #             linewidth=1, markersize=3)
+        self.axes.plot(x, y, "bo-" , x1, y1,  "go")
 
+        # plt.plot(x, y)
+        # plt.show()
 
 if __name__ == "__main__":
-    # F = MyFigure()
-    print(dir(FigureCanvas))
+    F = MyFigure()
+    # print(dir(FigureCanvas))
