@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b5131542-fa96-40f1-9fe5-4fc747e2422b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CogPara.py" beforeDir="false" afterPath="$PROJECT_DIR$/CogPara.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CogPara.ui" beforeDir="false" afterPath="$PROJECT_DIR$/CogPara.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CogParaWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/CogParaWindow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readdemo.py" beforeDir="false" afterPath="$PROJECT_DIR$/readdemo.py" afterDir="false" />
     </list>
@@ -16,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CogParaWindow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+            <state relative-caret-position="304">
+              <caret line="118" column="36" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -28,32 +26,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/readdemo.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="107" column="70" selection-start-line="107" selection-start-column="70" selection-end-line="107" selection-end-column="70" />
-              <folding>
-                <element signature="e#2#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="189" selection-start-line="189" selection-end-line="189" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CogPara.py">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydev_ipython/inputhookqt5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-437">
-              <caret line="10" column="10" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyFigure.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="145">
+              <caret line="111" selection-start-line="111" selection-end-line="111" />
             </state>
           </provider>
         </entry>
@@ -63,6 +49,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>myMainWindow</find>
+      <find>str</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -79,8 +66,8 @@
         <option value="$PROJECT_DIR$/data/day02/B01_20190824061921.txt" />
         <option value="$PROJECT_DIR$/data/day01/A01_20190824061922.txt" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/CogParaWindow.py" />
         <option value="$PROJECT_DIR$/readdemo.py" />
+        <option value="$PROJECT_DIR$/CogParaWindow.py" />
       </list>
     </option>
   </component>
@@ -107,6 +94,11 @@
               <item name="HCI-vision" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\ASUS\Desktop\PYProjects\HCI-vision" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="data" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="HCI-vision" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\ASUS\Desktop\PYProjects\HCI-vision" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="imgs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -149,7 +141,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.readdemo">
+  <component name="RunManager" selected="Python.CogParaWindow">
     <configuration name="CogParaWindow" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="HCI-vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -194,8 +186,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.readdemo" />
         <item itemvalue="Python.CogParaWindow" />
+        <item itemvalue="Python.readdemo" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605157930836</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: 运行模型功能">
+      <created>1605160717830</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605160717830</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -280,8 +279,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4966975" visible="true" weight="0.41784704" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4966975" visible="true" weight="0.25637394" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3101983" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -341,7 +340,8 @@
     <MESSAGE value="数据处理模块" />
     <MESSAGE value="数据处理部分完成" />
     <MESSAGE value="feat: 打开模型功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 打开模型功能" />
+    <MESSAGE value="feat: 运行模型功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 运行模型功能" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/data/day01/A03_20200618104614" />
@@ -412,10 +412,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyFigure.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/numpy/core/_methods.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="128">
+          <caret line="150" selection-start-line="150" selection-end-line="150" />
         </state>
       </provider>
     </entry>
@@ -426,22 +426,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CogParaWindow.py">
+    <entry file="file://$PROJECT_DIR$/MyFigure.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readdemo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="107" column="70" selection-start-line="107" selection-start-column="70" selection-end-line="107" selection-end-column="70" />
+        <state relative-caret-position="102">
+          <caret line="136" column="30" lean-forward="true" selection-start-line="136" selection-start-column="30" selection-end-line="136" selection-end-column="30" />
           <folding>
             <element signature="e#2#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydev_ipython/inputhookqt5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CogParaWindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="118" column="36" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>

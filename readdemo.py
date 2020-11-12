@@ -81,10 +81,6 @@ def main():
                 # print( "均值:", b.mean() )
                 # print( '标准差:', b.std() )
 
-# 提供外部接口
-def get_data():
-    main()
-    return testers,testers_day
 
 def day_calc(list_day):
     # enumerate函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标
@@ -135,12 +131,19 @@ def day_calc(list_day):
     ]
 )
 
+# 提供外部接口
+def get_data():
+    main()
+    return testers,testers_day
+
+def get_total_day():
+    main()
+    day_calc( testers_day )
+    return testers_day_total_result
 
 if __name__ == '__main__':
     main()
     day_calc(testers_day)
-    print(testers_day_result)
-    print(testers_day_total_result)
-    print(get_data())
-    dict, list = get_data()
+    print(get_total_day())
+
 

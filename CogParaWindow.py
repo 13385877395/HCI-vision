@@ -5,12 +5,14 @@ from subprocess import Popen, PIPE
 from CogPara import Ui_MainWindow
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox,QLineEdit
 from PyQt5.QtCore import Qt, pyqtSignal
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon, QPixmap
 from MyFigure import MyFigure, QThread
 import numpy as np
 from PyQt5 import QtCore, QtGui, QtWidgets
 import matplotlib.pyplot as plt
 from PyQt5.QtWidgets import QApplication, QFileDialog
+
+from  readdemo import get_total_day
 
 class MyWindow(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
@@ -35,21 +37,32 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         self.textBrowser.clear()
         self.textBrowser.append( "打开文件："+ self.model_path)
     def RunModel(self, now):
+        self.run_process = RunshowHandler()
+        self.run_process.breakSignal.connect( self.runShow )
+        self.run_process.start()
         try:
             print(self.model_path)
             self.run_process = RunModelHandler( self.model_path )
             self.run_process.trigger.connect( self.call_backlog )
             self.run_process.start()
+
         except:
             # 提式加载文件
             self.textBrowser.clear()
             self.textBrowser.append( "请先打开模型文件" )
             pass
-    def call_backlog(self, str):
-        self.textBrowser.append(str)
+    def call_backlog(self, string):
+        self.textBrowser.append(string)
         self.cursor = self.textBrowser.textCursor()
         self.textBrowser.moveCursor( self.cursor.End )  # 光标移到最后，这样就会自动显示出来
         QtWidgets.QApplication.processEvents()  # 一定加上这个功能，不然有卡顿
+
+    def runShow(self,num):
+        if num!=-1:
+            self.label_4.setText(str(num))
+        else:
+            poxmap = QPixmap('./imgs/vigilancecross.jpg')
+            self.label_4.setPixmap(poxmap)
 
 class RunModelHandler( QThread ):
     #  通过类成员对象定义信号对象
@@ -86,6 +99,26 @@ class RunModelHandler( QThread ):
     def write(self, out_stream):
         """ :param out_stream: :return: """
         self.trigger.emit( out_stream )
+
+class RunshowHandler( QThread ):
+    #  通过类成员对象定义信号对象
+    breakSignal = pyqtSignal( int )
+
+    def __init__(self):
+        super( RunshowHandler, self ).__init__()
+    def run(self):
+        # 要定义的行为，比如开始一个活动什么的
+        print( 1111111111111111 )
+        result = get_total_day()
+        print(result)
+        for i in result:
+            for j in range( 0, int(i[0]) ):
+                self.msleep(1)
+                self.breakSignal.emit( j )
+            self.sleep(1)
+            self.breakSignal.emit( -1 )
+            self.sleep( 2 )
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
