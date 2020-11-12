@@ -127,9 +127,9 @@ def day_calc(list_day):
 
 
 if __name__ == '__main__':
-    # main()
-    # day_calc(testers_day)
-    # print(testers_day_result)
+    main()
+    day_calc(testers_day)
+    print(testers_day_result)
     print(get_data())
     dict, list = get_data()
 
