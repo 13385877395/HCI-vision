@@ -37,6 +37,7 @@ day_dir=file_name('data')
 testers_day = [{'A01': [], 'A02': [], 'A03': [], 'B01': []} for i  in range(len( day_dir ))]
 # 数据储存（测试者每阶段的结果） 
 testers_day_result = [{'A01': [], 'A02': [], 'A03': [], 'B01': []} for i  in range(len( day_dir ))]
+testers_day_total_result = [ [] for i  in range(len( day_dir ))]
 
 def main():
     for day in day_dir:#按天来
@@ -89,6 +90,8 @@ def day_calc(list_day):
     # enumerate函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标
     for index,i in enumerate(list_day):
         # print('第',index+1,'阶段')
+        day_mean = []
+        day_std = []
         for key in i.keys():
             # 计算数据求均值，方差
             if (i[key]):
@@ -96,8 +99,15 @@ def day_calc(list_day):
                 # print( '测试者:', key )
                 # print( "均值:", b.mean() )
                 # print( '标准差:', b.std() )
-                # print( '方差:', b.var() )
-                testers_day_result[index][key]=[b.mean(), b.std(),b.var()]
+                # print( '协方差:', b.cov() )
+                day_mean.append(b.mean())
+                day_std.append(b.std())
+                testers_day_result[index][key]=[b.mean(), b.std()]
+        day_mean = np.array( day_mean )
+        day_std = np.array( day_std )
+        testers_day_total_result[index]=[day_mean.mean(),day_std.mean()]
+    # 数据格式
+    # [{'A01': [563.2, 163.68066471028274], 'A02': [564.5, 180.50138503623734], 'A03': [558.0, 60.0], 'B01': []}, {'A01': [], 'A02': [], 'A03': [], 'B01': [558.0, 60.0]}]
 
 #数据形式如下
 (
@@ -130,6 +140,7 @@ if __name__ == '__main__':
     main()
     day_calc(testers_day)
     print(testers_day_result)
+    print(testers_day_total_result)
     print(get_data())
     dict, list = get_data()
 

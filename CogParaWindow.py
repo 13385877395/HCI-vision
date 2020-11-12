@@ -24,35 +24,27 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         self.F = MyFigure()
         self.verticalLayout.addWidget(self.F)  #把figure放到widget里面
         self.F.plot()
-        self.pushButton.clicked.connect(self.RunModel)
+        self.openModel.clicked.connect(self.OpenModel)
+        self.runModel.clicked.connect(self.RunModel)
 
-    def RunModel(self, now):
-        # 获取lisp文件地址
-        # 加载运行模型并且保存运行结果
-        # try:
-        #     self.textBrowser.clear()
-        #     savedStdout = sys.stdout
-        #     read = __Autonomy__(self.textBrowser)
-        #     sys.stdout = read
-        #     actr.load_act_r_code( r"ACT-R:tutorial;unit1;count1.lisp" )
-        #     actr.run( 10 )
-        #     sys.stdout = savedStdout
-        #     # os.popen( "taskkill /f /t /im act-r.exe" )
-        # except Exception as e:
-        #     print(e)
-
-        print( "打开" )
+    def OpenModel(self):
         # my_file_path = dialog.getOpenFileName(self, "打开文件", "/", "*.txt")
         my_file_path = QFileDialog.getOpenFileName( self, '选择文件', '', 'Excel files(*.txt , *.py)' )
         self.model_path = my_file_path[0]
         # 路径不能包含中文
-        print( self.model_path )
-        if self.model_path == None:
-            pass
-        else:
+        self.textBrowser.clear()
+        self.textBrowser.append( "打开文件："+ self.model_path)
+    def RunModel(self, now):
+        try:
+            print(self.model_path)
             self.run_process = RunModelHandler( self.model_path )
             self.run_process.trigger.connect( self.call_backlog )
             self.run_process.start()
+        except:
+            # 提式加载文件
+            self.textBrowser.clear()
+            self.textBrowser.append( "请先打开模型文件" )
+            pass
     def call_backlog(self, str):
         self.textBrowser.append(str)
         self.cursor = self.textBrowser.textCursor()
